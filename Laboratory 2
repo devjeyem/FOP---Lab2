@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+    // Code for Problem 1
+
+    int x;
+    float bp_in;
+    float mm_hg;
+
+    printf("Enter the value of x: ");
+    scanf("%d",&x);
+
+    bp_in = 29.29 * exp (-0.2 * x);
+
+    printf("Barometric pressure in inches of mercury: %f\n", bp_in);
+
+    mm_hg = (bp_in * 25.4);
+
+    printf("Barometric pressure in millimeters of mercury: %f\n\n", mm_hg);
+
+
+    // Code for Problem 2
+
+    int t;
+    int CPI;
+
+    printf("Enter time in years: ");
+    scanf("%d", &t);
+
+    CPI = (-0.2 * pow(t,3)) + (3 * pow(t,2)) + 100;
+
+    printf("Consumer Price Index: %d\n\n", CPI);
+
+
+    // Code for Problem 3
+
+    int seconds;
+    int minutes;
+    int hour;
+    int remain_sec1;
+    int remain_sec2;
+
+    printf("Enter the number of seconds to be converted: ");
+    scanf("%d", &seconds);
+
+    hour = (seconds / 3600);
+    remain_sec1 = (seconds % 3600);
+    minutes = (remain_sec1 / 60);
+    remain_sec2 = (remain_sec1 % 60);
+    seconds = remain_sec2;
+
+    printf("Result: %d hour %d minutes %d seconds", hour, minutes, seconds);
+
+    return 0;
+}
+
+
+
+
+
+
